@@ -60,7 +60,7 @@ export default function PainPoints() {
           style={{ backgroundColor: mobileBackgroundColor }}
         >
           {/* Content: 실제 텍스트/이미지 */}
-          <Container className="flex flex-col items-center gap-10 w-full relative z-10">
+          <Container className="flex flex-col items-center gap-10 w-full relative z-10 pt-16">
             <motion.div
               className="flex w-full max-w-5xl flex-col items-center gap-10"
               style={{
@@ -69,7 +69,7 @@ export default function PainPoints() {
                 willChange: "opacity, transform",
               }}
             >
-              <h2 className="text-center text-3xl font-bold text-foreground">
+              <h2 className="text-center text-3xl font-bold text-foreground pt-8">
                 혹시 이런 고민, 하고 계시지 않으세요?
               </h2>
 
