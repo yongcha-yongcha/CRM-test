@@ -1,0 +1,32 @@
+# Project Rules
+
+- 이 프로젝트는 **Next.js (App Router)**와 **shadcn/ui**를 사용합니다.
+- 패키지 매니저는 **pnpm**을 사용합니다.
+- 새로운 UI가 필요하면 항상 `components/ui` 폴더에 있는 shadcn 컴포넌트를 우선적으로 사용하세요.
+- 만약 해당 컴포넌트가 없다면, 나에게 `pnpm dlx shadcn@latest add [컴포넌트명]` 명령어를 실행하라고 먼저 요청하세요.
+- 라이브러리 설치가 필요할 때는 `pnpm add [라이브러리명]` 명령어를 제안하세요. (npm install 금지)
+
+# Design System & Styling Rules
+
+- **Visual Style**: Clean, Modern, Minimalist SaaS Aesthetics.
+- **Color Palette**: 
+  - **Primary Color**: Tailwind 설정에 정의된 `primary` 컬러(Brand Color)를 포인트로 사용하세요. 버튼, 활성화 상태, 강조 텍스트에 이 색상을 적극 활용하세요.
+  - **Base Colors**: 배경과 일반 텍스트는 `Slate` 또는 `Zinc` 계열의 뉴트럴 컬러를 사용하여 가독성을 높이세요.
+  - 다크 모드/라이트 모드 전환 시 색상 대비가 명확해야 합니다.
+- **Typography**:
+  - **Font Family**: 모든 텍스트에는 **'Pretendard'** 폰트를 사용합니다. (한글 가독성 최적화)
+  - Headings: `font-bold`, `tracking-tight`. Hero 섹션의 H1은 압도적인 크기로 설정하세요.
+  - Body: `text-lg`, `text-muted-foreground` (회색조)를 사용하여 위계 질서를 잡으세요.
+- **Spacing**:
+  - 여백은 과감하게 사용하세요. (Section padding: `py-24` or `py-32`).
+  - 요소 간 간격은 `gap-4`, `gap-8` 등을 일관되게 사용하세요.
+- **Components Styling**:
+  - 모든 버튼과 카드는 `rounded-xl` 또는 `rounded-2xl`을 사용하여 부드러운 느낌을 주세요.
+  - 카드 컴포넌트에는 은은한 `border`와 `hover:shadow-lg` 효과를 추가하세요.
+  - 아이콘은 `lucide-react`를 사용하세요.
+
+# Code Generation Rules
+
+- UI 구성 시 **Bento Grid** 레이아웃을 적극 활용하세요.
+- 단순한 나열보다는 `Grid`와 `Flexbox`를 활용하여 짜임새 있는 레이아웃을 만드세요.
+- 애니메이션이 필요한 경우 `framer-motion`을 사용하여 부드러운 진입 효과(Fade-in, Slide-up)를 넣으세요.
