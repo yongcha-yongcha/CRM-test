@@ -32,12 +32,14 @@ export default function Navigation() {
           borderStyle: scrolled ? "solid" : "none",
           borderColor: scrolled ? "rgba(255, 255, 255, 0.1)" : "transparent",
           backdropFilter: scrolled ? "blur(12px)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
           paddingTop: scrolled ? "0.75rem" : "1rem",
           paddingBottom: scrolled ? "0.75rem" : "1rem",
           paddingLeft: "1.5rem",
           paddingRight: "1.5rem",
         }}
+        style={{
+          WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
+        } as React.CSSProperties}
         transition={{
           type: "tween",
           ease: [0.4, 0, 0.2, 1],

@@ -26,7 +26,7 @@ export default function Solutions() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-white" style={{ backgroundClip: 'unset', WebkitBackgroundClip: 'unset' }}>자동으로 손님 DB / 포인트 적립</h3>
               <p className="text-primary/80 text-sm font-semibold mb-4">
-                "손님이 태그히어로 주문하면 끝"
+                &quot;손님이 태그히어로 주문하면 끝&quot;
               </p>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                 전화번호 입력? 도장? 다 필요 없습니다. 주문 후 카카오 로그인 한 번이면 포인트 적립과 DB 확보가 자동으로 이루어집니다.
@@ -42,7 +42,7 @@ export default function Solutions() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-white">네이버 리뷰 자동 요청</h3>
               <p className="text-green-300 text-sm font-semibold mb-4">
-                "주문하면 자동으로 리뷰 요청"
+                &quot;주문하면 자동으로 리뷰 요청&quot;
               </p>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                 포인트 적립 완료 시 알림톡으로 리뷰 요청이 자동 발송됩니다. 직접 부탁하지 않아도 리뷰가 쌓이는 마법을 경험하세요.
@@ -58,7 +58,7 @@ export default function Solutions() {
               </div>
               <h3 className="text-xl font-bold mb-2">똑똑한 타겟 메시지</h3>
               <p className="text-purple-300 text-sm font-semibold mb-4">
-                "한 달 안 온 손님에게만 쏙"
+                &quot;한 달 안 온 손님에게만 쏙&quot;
               </p>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                 전체 발송보다 효과 3배! 신규, 재방문, 휴면 고객을 자동으로 분류하여 꼭 필요한 사람에게만 쿠폰을 보냅니다.
@@ -83,7 +83,7 @@ export default function Solutions() {
                     새로운 손님을 찾아드립니다
                   </h3>
                   <p className="text-slate-300 mb-6 leading-relaxed">
-                    우리 매장 근처(시/군/구)와 우리 업종에 관심 있는 '진짜 잠재 고객'에게 광고를 보내보세요.<br />
+                    우리 매장 근처(시/군/구)와 우리 업종에 관심 있는 &apos;진짜 잠재 고객&apos;에게 광고를 보내보세요.<br />
                     태그히어 데이터를 기반으로 하여 반응률이 압도적입니다.
                   </p>
                   <ul className="space-y-2 text-sm text-slate-400">
