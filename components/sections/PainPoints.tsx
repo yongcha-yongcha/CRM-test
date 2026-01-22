@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Container from "@/components/layout/Container";
 import { TrendingDown, MessageSquare, DollarSign } from "lucide-react";
 
@@ -49,31 +49,24 @@ export default function PainPoints() {
 
   return (
     <section className="relative bg-white md:bg-transparent">
-      {/* 모바일: 스크롤 인터랙션 */}
+      {/* 모바일: 정석 Sticky 구조 */}
       <div
         ref={mobileSectionRef}
-        className="md:hidden h-[200vh]"
+        className="md:hidden relative h-[300vh]"
       >
-        {/* Sticky: 스크롤 동안 화면 중앙 고정 */}
+        {/* Sticky Wrapper: 화면에 딱 달라붙게 */}
         <motion.div
-          className="sticky top-0 flex h-screen w-full flex-col items-center justify-center overflow-x-hidden overflow-y-visible py-0"
+          className="sticky top-0 h-screen flex items-center overflow-hidden"
           style={{ backgroundColor: mobileBackgroundColor }}
         >
-          {/* 타이틀 위쪽 터치 영역: 페이지 스크롤 가능하도록 */}
-          <div 
-            className="absolute top-0 left-0 w-full h-[20vh] pointer-events-auto z-0"
-            style={{ touchAction: 'pan-y' }}
-          />
-          <Container className="flex flex-col items-center gap-10 relative z-10">
-            {/* 제목 + 3단 그리드 (함께 fade/scale) */}
+          {/* Content: 실제 텍스트/이미지 */}
+          <Container className="flex flex-col items-center gap-10 w-full relative z-10">
             <motion.div
               className="flex w-full max-w-5xl flex-col items-center gap-10"
               style={{
                 opacity: mobileCardsOpacity,
                 scale: mobileCardsScale,
                 willChange: "opacity, transform",
-                touchAction: 'pan-y',
-                userSelect: 'none',
               }}
             >
               <h2 className="text-center text-3xl font-bold text-foreground">
@@ -81,10 +74,7 @@ export default function PainPoints() {
               </h2>
 
               {/* Apple 스타일 3단 텍스트 그리드 */}
-              <div 
-                className="grid w-full grid-cols-1 gap-8 py-12"
-                style={{ touchAction: 'pan-y', userSelect: 'none' }}
-              >
+              <div className="grid w-full grid-cols-1 gap-8 py-12">
                 <motion.div
                   className="flex flex-col"
                   initial={{ x: -50, filter: "blur(10px)", opacity: 0 }}
@@ -155,7 +145,7 @@ export default function PainPoints() {
               y: mobileHeroY,
               opacity: mobileHeroOpacity,
               willChange: "opacity, transform",
-              color: "#67e8f9", /* cyan-300 형광 블루 */
+              color: "#67e8f5",
             }}
           >
             이 모든 걸 태그히어 CRM이 대신합니다.
@@ -163,18 +153,18 @@ export default function PainPoints() {
         </motion.div>
       </div>
 
-      {/* 데스크탑: 스크롤 인터랙션 */}
+      {/* 데스크탑: 정석 Sticky 구조 */}
       <div
         ref={sectionRef}
-        className="hidden md:block h-[200vh]"
+        className="hidden md:block relative h-[300vh]"
       >
-        {/* Sticky: 스크롤 동안 화면 중앙 고정 */}
+        {/* Sticky Wrapper: 화면에 딱 달라붙게 */}
         <motion.div
-          className="sticky top-0 flex h-screen w-full flex-col items-center justify-center overflow-x-hidden overflow-y-visible py-0"
+          className="sticky top-0 h-screen flex items-center overflow-hidden"
           style={{ backgroundColor }}
         >
-          <Container className="flex flex-col items-center gap-10 md:gap-16 relative z-10">
-            {/* 제목 + 3단 그리드 (함께 fade/scale) */}
+          {/* Content: 실제 텍스트/이미지 */}
+          <Container className="flex flex-col items-center gap-10 md:gap-16 w-full relative z-10">
             <motion.div
               className="flex w-full max-w-5xl flex-col items-center gap-10 md:gap-16"
               style={{
@@ -259,7 +249,7 @@ export default function PainPoints() {
               y: heroY,
               opacity: heroOpacity,
               willChange: "opacity, transform",
-              color: "#67e8f9", /* cyan-300 형광 블루 */
+              color: "#67e8f5",
             }}
           >
             이 모든 걸 태그히어 CRM이 대신합니다.
