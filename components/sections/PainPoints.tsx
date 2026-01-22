@@ -53,13 +53,17 @@ export default function PainPoints() {
       <div
         ref={mobileSectionRef}
         className="md:hidden h-[200vh]"
-        style={{ contain: "layout" }}
       >
         {/* Sticky: 스크롤 동안 화면 중앙 고정 */}
         <motion.div
           className="sticky top-0 flex h-screen w-full flex-col items-center justify-center overflow-x-hidden overflow-y-visible py-0"
           style={{ backgroundColor: mobileBackgroundColor }}
         >
+          {/* 타이틀 위쪽 터치 영역: 페이지 스크롤 가능하도록 */}
+          <div 
+            className="absolute top-0 left-0 w-full h-[20vh] pointer-events-auto z-0"
+            style={{ touchAction: 'pan-y' }}
+          />
           <Container className="flex flex-col items-center gap-10 relative z-10">
             {/* 제목 + 3단 그리드 (함께 fade/scale) */}
             <motion.div
@@ -68,6 +72,8 @@ export default function PainPoints() {
                 opacity: mobileCardsOpacity,
                 scale: mobileCardsScale,
                 willChange: "opacity, transform",
+                touchAction: 'pan-y',
+                userSelect: 'none',
               }}
             >
               <h2 className="text-center text-3xl font-bold text-foreground">
@@ -75,7 +81,10 @@ export default function PainPoints() {
               </h2>
 
               {/* Apple 스타일 3단 텍스트 그리드 */}
-              <div className="grid w-full grid-cols-1 gap-8 py-12">
+              <div 
+                className="grid w-full grid-cols-1 gap-8 py-12"
+                style={{ touchAction: 'pan-y', userSelect: 'none' }}
+              >
                 <motion.div
                   className="flex flex-col"
                   initial={{ x: -50, filter: "blur(10px)", opacity: 0 }}
@@ -158,7 +167,6 @@ export default function PainPoints() {
       <div
         ref={sectionRef}
         className="hidden md:block h-[200vh]"
-        style={{ contain: "layout" }}
       >
         {/* Sticky: 스크롤 동안 화면 중앙 고정 */}
         <motion.div
