@@ -2,41 +2,93 @@
 
 import Container from "@/components/layout/Container";
 import AnimatedSection from "@/components/layout/AnimatedSection";
-import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { motion } from "framer-motion";
+import { Gift, Coins, Phone } from "lucide-react";
 
 export default function FinalCTA() {
   return (
-    <AnimatedSection className="py-32 bg-slate-900 text-white text-center">
+    <AnimatedSection className="py-24 bg-white">
       <Container>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            지금 시작하면 월 구독료 무료
-          </h2>
-          <p className="text-xl text-slate-400 mb-12" style={{ fontSize: '16px' }}>
-            최고의 브랜드들과 빠르게 변화하는 방향에 동참하세요.<br />
-            태그히어를 경험한 700만+ 명이 그 증거입니다.
-          </p>
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-12 py-5 rounded-2xl text-xl shadow-lg transition transform hover:-translate-y-1"
+        <div className="max-w-2xl mx-auto text-center">
+          {/* 헤더 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
-            월 0원으로 시작하기
-          </Button>
-          <div className="mt-8 flex justify-center gap-6 text-sm text-slate-500">
-            <span className="flex items-center gap-1">
-              <Check className="w-4 h-4" />
-              설치 필요 없음
-            </span>
-            <span className="flex items-center gap-1">
-              <Check className="w-4 h-4" />
-              도입비용 무료
-            </span>
-            <span className="flex items-center gap-1">
-              <Check className="w-4 h-4" />
-              언제든 해지 가능
-            </span>
-          </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+              지금 바로 시작하세요
+            </h2>
+            <p className="text-neutral-600 text-lg mb-10">
+              이미 어제 매장에 방문한 50명의 손님을 놓쳤어요.
+              <br />
+              고객 DB는 하루라도 빨리 쌓기 시작해야 합니다.
+            </p>
+          </motion.div>
+
+          {/* 혜택 카드들 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="space-y-4 mb-10"
+          >
+            {/* 혜택 1 */}
+            <div className="flex items-start gap-4 p-4 bg-neutral-50 rounded-xl text-left">
+              <div className="w-10 h-10 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Gift className="w-5 h-5 text-[#3B82F6]" />
+              </div>
+              <div>
+                <p className="font-bold text-neutral-900">월 구독료 0원</p>
+                <p className="text-sm text-neutral-500">프로모션 기간 한정 평생 무료</p>
+              </div>
+            </div>
+
+            {/* 혜택 2 */}
+            <div className="flex items-start gap-4 p-4 bg-neutral-50 rounded-xl text-left">
+              <div className="w-10 h-10 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Coins className="w-5 h-5 text-[#3B82F6]" />
+              </div>
+              <div>
+                <p className="font-bold text-neutral-900">매 월 리타겟 메시지 마케팅 30 크레딧 제공</p>
+                <p className="text-sm text-neutral-500">매 달 메시지 발송 지원금 증정</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* CTA 버튼 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <motion.a
+              href="https://tally.so/r/jab1oR"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full max-w-md bg-[#3B82F6] text-white font-bold py-4 rounded-xl mb-6 flex items-center justify-center gap-2 mx-auto"
+            >
+              월 0원으로 시작하기 →
+            </motion.a>
+
+            <div className="flex items-center justify-center gap-2 text-neutral-500">
+              <Phone className="w-4 h-4" />
+              <span className="text-sm">문의전화</span>
+              <span className="font-bold text-neutral-900">070-4138-0263</span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* 푸터 */}
+        <div className="mt-16 pt-8 border-t border-neutral-200 text-center">
+          <p className="text-sm text-neutral-400">
+            © 2026 TagHere Inc. All rights reserved.
+          </p>
         </div>
       </Container>
     </AnimatedSection>

@@ -61,17 +61,23 @@ export default function Navigation() {
               요금안내
             </a>
             <motion.div layout>
-              <Button
-                variant="default"
-                size="lg"
-                className={`text-sm font-semibold px-5 py-2.5 transition-all duration-600 ${
-                  scrolled
-                    ? "bg-white/10 text-white hover:bg-white/20 border border-white/20 rounded-full"
-                    : "bg-white text-black hover:bg-white/90 rounded-lg"
-                }`}
+              <a
+                href="https://tally.so/r/jab1oR"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                월 0원으로 시작하기
-              </Button>
+                <Button
+                  variant="default"
+                  size="lg"
+                  className={`text-sm font-semibold px-5 py-2.5 transition-all duration-600 ${
+                    scrolled
+                      ? "bg-white/10 text-white hover:bg-white/20 border border-white/20 rounded-full"
+                      : "bg-white text-black hover:bg-white/90 rounded-lg"
+                  }`}
+                >
+                  월 0원으로 시작하기
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>

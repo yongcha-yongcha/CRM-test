@@ -22,24 +22,22 @@ export default function FAQ() {
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1" className="border-b border-border">
                   <AccordionTrigger className="text-lg font-bold text-left px-6 py-6 hover:no-underline">
-                    Q. 태그히어 오더 서비스를 사용해야만 쓸 수 있나요?
+                    Q. 태그히어 주문/결제 서비스를 사용해야만 쓸 수 있나요?
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="px-6 pb-6 text-foreground/70 leading-relaxed text-sm pl-10">
-                      아니요. TagHere CRM은 독립적으로도 사용 가능합니다. 태그히어 오더가 없어도 태블릿만 별도 구매(또는 보유 기기 활용)하시면 모든 기능을 사용하실 수 있습니다.
+                      아니요, 태그히어 CRM은 스탬프 태그를 통해 독립적으로 사용 가능합니다. 단, 상세한 주문 내역, 메뉴 선호도 등의 데이터는 태그히어 주문/결제 서비스 이용 시에만 수집됩니다.
                     </div>
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-2" className="border-b border-border">
+                <AccordionItem value="item-3" className="border-b border-border">
                   <AccordionTrigger className="text-lg font-bold text-left px-6 py-6 hover:no-underline">
-                    Q. 태블릿은 어떻게 구하나요?
+                    Q. 스탬프 태그의 가격은 얼마인가요?
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="px-6 pb-6 text-foreground/70 leading-relaxed text-sm pl-10">
-                      두 가지 방법이 있습니다.<br />
-                      1. 태그히어에서 포인트 적립 전용 태블릿을 구매 (250,000원)<br />
-                      2. 이미 가지고 계신 태블릿이나 별도로 구매한 기기에 앱을 설치하여 사용
+                      스탬프 태그 1개당 비용은 7,900원입니다.
                     </div>
                   </AccordionContent>
                 </AccordionItem>

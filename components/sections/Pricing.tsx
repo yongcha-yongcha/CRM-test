@@ -2,75 +2,115 @@
 
 import Container from "@/components/layout/Container";
 import AnimatedSection from "@/components/layout/AnimatedSection";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-
-const BENEFITS = ["설치비 0원", "해지 위약금 0원", "도입 비용 0원"];
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 
 export default function Pricing() {
+  const benefits = [
+    "고객 DB 무제한 저장",
+    "방문경로 수집 기능",
+    "매출/방문 분석 대시보드",
+  ];
+
+  const messagePricing = [
+    { name: "알림톡", description: "정보성 메시지", price: "20원" },
+    { name: "SMS / LMS", description: "단문/장문 문자", price: "50원" },
+    { name: "MMS", description: "이미지 포함", price: "120원" },
+    { name: "신규 고객 찾기", description: "Premium 타겟팅", price: "200원", highlight: true },
+  ];
+
   return (
     <AnimatedSection id="pricing" className="py-24 bg-slate-50">
       <Container>
-        <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-foreground">
-          가격 걱정 없이 시작하세요
-        </h2>
+        <div className="text-center mb-12">
+          <span className="text-[#3B82F6] font-medium tracking-wide uppercase text-sm">
+            PRICING PLAN
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
+            합리적인 요금, <span className="text-[#3B82F6]">쓴 만큼만</span>
+          </h2>
+          <p className="text-foreground/60 mt-3">
+            월 이용료 0원, 마케팅 비용은 성과에 맞춰 조절하세요.
+          </p>
+        </div>
 
-        <div className="mx-auto max-w-[480px]">
-          <div className="text-left rounded-2xl border border-border bg-white p-10 shadow-sm">
-            {/* 헤더 */}
-            <h3 className="text-2xl font-bold tracking-tight text-foreground">
-              태그히어 기본 플랜
-            </h3>
-            <p className="mt-1 text-sm text-muted-foreground">
-              온라인 예약과 리뷰 관리까지, 한 곳에서
-            </p>
-
-            <Separator className="my-6" />
-
-            {/* 가격 */}
-            <p className="text-sm text-muted-foreground line-through">
-              정가 월 33,000원
-            </p>
-            <div className="mt-1 flex flex-wrap items-baseline gap-2">
-              <span className="font-bold tracking-tight text-[#1d2022] text-5xl md:text-6xl">
-                월 0원
-              </span>
-              <span className="text-base font-medium text-primary">
-                이벤트 진행 중!
-              </span>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* 좌측: 기본 월 구독료 */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl border border-neutral-200 p-8"
+          >
+            <div className="inline-block bg-neutral-900 text-white text-xs font-medium px-3 py-1 rounded-full mb-4">
+              LIMITED OFFER
             </div>
 
-            {/* CTA */}
-            <Button
-              size="lg"
-              className="mt-6 w-full rounded-xl py-6 text-base font-bold"
-            >
-              무료로 시작하기
-            </Button>
+            <h3 className="text-xl font-bold text-neutral-900 mb-1">기본 월 구독료</h3>
+            <p className="text-neutral-500 text-sm mb-6">CRM 솔루션 이용료</p>
 
-            {/* 주요 혜택 (Feature List 스타일) */}
-            <p className="mt-8 font-bold text-foreground">주요 혜택</p>
-            <ul className="mt-3">
-              {BENEFITS.map((label, i) => (
-                <li key={label}>
-                  <span className="text-foreground/90 py-3 block text-[15px]">
-                    {label}
-                  </span>
-                  {i < BENEFITS.length - 1 && <Separator />}
+            <div className="mb-6">
+              <p className="text-neutral-400 line-through text-lg">₩33,000</p>
+              <div className="flex items-baseline gap-2">
+                <span className="text-[#3B82F6] text-sm font-medium">100% OFF (프로모션)</span>
+              </div>
+              <div className="flex items-baseline gap-2 mt-2">
+                <span className="text-5xl font-bold text-neutral-900">0</span>
+                <span className="text-2xl font-bold text-neutral-900">원</span>
+                <span className="text-neutral-500">/ 월</span>
+              </div>
+              <p className="text-[#3B82F6] text-sm mt-2 underline">
+                프로모션 기간 내 신청시 평생 무료
+              </p>
+            </div>
+
+            <ul className="space-y-3 mb-6">
+              {benefits.map((benefit, index) => (
+                <li key={index} className="flex items-center gap-2 text-neutral-700">
+                  <Check className="w-5 h-5 text-neutral-900" />
+                  <span>{benefit}</span>
                 </li>
               ))}
             </ul>
 
-            {/* 고지 사항 */}
-            <div className="mt-8 space-y-1.5 text-left text-xs text-muted-foreground">
-              <p>* 이벤트는 내부 사정에 의해 조기 마감될 수 있습니다.</p>
-              <p>
-                * 알림톡, SMS 등 메시지 발송 서비스 이용 시에만 건당 실비용이
-                발생합니다.
-              </p>
-              <p>* 메시지를 발송하지 않으면 청구되는 비용은 없습니다.</p>
+            <p className="text-xs text-neutral-400">
+              * NFC/QR 태그는 별도 도입 비용 발생
+            </p>
+          </motion.div>
+
+          {/* 우측: 메시지 단가 */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-white rounded-2xl border border-neutral-200 p-8"
+          >
+            <h3 className="text-xl font-bold text-neutral-900 mb-1">메시지 단가</h3>
+            <p className="text-neutral-500 text-sm mb-6">충전 후 차감 (VAT 별도)</p>
+
+            <div className="space-y-4">
+              {messagePricing.map((item, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center justify-between py-4 ${
+                    index !== messagePricing.length - 1 ? "border-b border-neutral-100" : ""
+                  }`}
+                >
+                  <div>
+                    <p className={`font-medium ${item.highlight ? "text-[#3B82F6]" : "text-neutral-900"}`}>
+                      {item.name}
+                    </p>
+                    <p className="text-sm text-neutral-500">{item.description}</p>
+                  </div>
+                  <p className={`text-xl font-bold ${item.highlight ? "text-[#3B82F6]" : "text-neutral-900"}`}>
+                    {item.price}
+                  </p>
+                </div>
+              ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </AnimatedSection>
