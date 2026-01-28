@@ -49,15 +49,15 @@ export default function Hero() {
         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 w-[360px] text-left">
           <div className="space-y-3 mb-4">
             <div className="flex items-center gap-2 text-white">
-              <span className="text-green-400">✓</span>
-              <span>월 구독료 0원 <span className="text-green-400">(정가 33,000원)</span></span>
+              <span className="text-[#3B82F6]">✓</span>
+              <span>월 구독료 0원 <span className="text-[#3B82F6]">(정가 33,000원)</span></span>
             </div>
             <div className="flex items-center gap-2 text-white">
-              <span className="text-green-400">✓</span>
+              <span className="text-[#3B82F6]">✓</span>
               <span>설치 필요 없음</span>
             </div>
             <div className="flex items-center gap-2 text-white">
-              <span className="text-green-400">✓</span>
+              <span className="text-[#3B82F6]">✓</span>
               <span>언제든 해지 가능</span>
             </div>
           </div>

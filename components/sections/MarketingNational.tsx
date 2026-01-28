@@ -9,15 +9,15 @@ export default function MarketingNational() {
   return (
     <AnimatedSection className="py-24 bg-neutral-950">
       <Container>
-        <div className="flex items-center gap-2 mb-4">
+        <div className="text-center mb-12">
           <span className="text-[#3B82F6] font-medium">[마케팅]</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 mt-2">
+            전국에서 모은 고객 DB를 활용해 신규 고객을 유치
+          </h2>
+          <p className="text-neutral-400">
+            시/군/구, 선호 업종별 고객에게 카카오톡/메시지 발송을 통해 매장에 신규 고객을 유치해 보세요.
+          </p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          전국에서 모은 고객 DB를 활용해 신규 고객을 유치
-        </h2>
-        <p className="text-neutral-400 mb-12">
-          시/군/구, 선호 업종별 고객에게 카카오톡/메시지 발송을 통해 매장에 신규 고객을 유치해 보세요.
-        </p>
 
         {/* UI 스크린샷 이미지 */}
         <motion.div

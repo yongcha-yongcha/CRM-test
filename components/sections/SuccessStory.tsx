@@ -9,15 +9,17 @@ export default function SuccessStory() {
   return (
     <AnimatedSection className="py-24 bg-white">
       <Container>
-        <div className="flex items-center gap-2 mb-4">
-          <TrendingUp className="w-5 h-5 text-[#3B82F6]" />
+        <div className="text-center mb-12">
+          <div className="flex justify-center mb-4">
+            <TrendingUp className="w-5 h-5 text-[#3B82F6]" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+            신규 고객 마케팅, 확실한 효과
+          </h2>
+          <p className="text-neutral-600">
+            불특정 다수가 아닌, 관심 고객에게만 보내면 결과가 다릅니다.
+          </p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-          신규 고객 마케팅, 확실한 효과
-        </h2>
-        <p className="text-neutral-600 mb-12">
-          불특정 다수가 아닌, 관심 고객에게만 보내면 결과가 다릅니다.
-        </p>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* 좌측: 비교표 */}

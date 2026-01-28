@@ -45,10 +45,10 @@ export default function HowItWorks() {
     <AnimatedSection className="py-24 bg-white">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mt-2">
             태그히어를 통해 고객 DB를 쌓는 방법
           </h2>
-          <p className="text-foreground/60 mt-3">
+          <p className="text-neutral-600 mt-3">
             복잡한 설치 없이 태그만 설치해두면 알아서 쌓여요.
           </p>
         </div>

@@ -24,7 +24,7 @@ export default function FloatingCTA() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
+          className="fixed bottom-6 left-0 right-0 z-50 flex justify-center pointer-events-none"
         >
           <motion.a
             href="https://tally.so/r/jab1oR"
@@ -32,7 +32,7 @@ export default function FloatingCTA() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 bg-[#3B82F6] text-white font-bold px-8 py-4 rounded-full shadow-[0_4px_20px_rgba(59,130,246,0.5)] hover:shadow-[0_4px_30px_rgba(59,130,246,0.7)] transition-all duration-300"
+            className="pointer-events-auto flex items-center gap-2 bg-[#3B82F6] text-white font-bold px-8 py-4 rounded-full shadow-[0_4px_20px_rgba(59,130,246,0.5)] hover:shadow-[0_4px_30px_rgba(59,130,246,0.7)] transition-all duration-300"
           >
             월 0원으로 시작하기
           </motion.a>

@@ -26,10 +26,10 @@ export default function Pricing() {
           <span className="text-[#3B82F6] font-medium tracking-wide uppercase text-sm">
             PRICING PLAN
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mt-2">
             합리적인 요금, <span className="text-[#3B82F6]">쓴 만큼만</span>
           </h2>
-          <p className="text-foreground/60 mt-3">
+          <p className="text-neutral-600 mt-3">
             월 이용료 0원, 마케팅 비용은 성과에 맞춰 조절하세요.
           </p>
         </div>

@@ -26,7 +26,7 @@ export default function CoreValue() {
             transition={{ duration: 0.5 }}
             className="bg-neutral-50 rounded-2xl p-8 border border-neutral-200"
           >
-            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-6">
               <Database className="w-6 h-6 text-[#3B82F6]" />
             </div>
             <h3 className="text-xl font-bold text-neutral-900 mb-3">
@@ -65,7 +65,7 @@ export default function CoreValue() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="bg-neutral-50 rounded-2xl p-8 border border-neutral-200"
           >
-            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-6">
               <Users className="w-6 h-6 text-[#3B82F6]" />
             </div>
             <h3 className="text-xl font-bold text-neutral-900 mb-3">

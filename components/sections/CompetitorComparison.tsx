@@ -66,12 +66,14 @@ export default function CompetitorComparison() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            왜 <span className="text-[#3B82F6]">TagHere CRM</span>인가요?
-          </h2>
-          <p className="text-neutral-600 mb-12">
-            압도적인 기능 차이, 비용은 0원으로 시작하세요.
-          </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+              왜 <span className="text-[#3B82F6]">TagHere CRM</span>인가요?
+            </h2>
+            <p className="text-neutral-600">
+              압도적인 기능 차이, 비용은 0원으로 시작하세요.
+            </p>
+          </div>
 
           <div className="bg-white rounded-2xl border border-neutral-200 overflow-hidden overflow-x-auto">
             <table className="w-full min-w-[640px]">
