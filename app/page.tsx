@@ -4,7 +4,6 @@ import Hero from "@/components/sections/Hero";
 import CoreValue from "@/components/sections/CoreValue";
 import IntroOptions from "@/components/sections/IntroOptions";
 import HowItWorks from "@/components/sections/HowItWorks";
-import DataCollection from "@/components/sections/DataCollection";
 import FeatureNaverReview from "@/components/sections/FeatureNaverReview";
 import FeatureVisitTracking from "@/components/sections/FeatureVisitTracking";
 import FeatureFeedback from "@/components/sections/FeatureFeedback";
@@ -27,7 +26,6 @@ export default function Page() {
       <IntroOptions />
       <CoreValue />
       <HowItWorks />
-      <DataCollection />
       <FeatureNaverReview />
       <FeatureVisitTracking />
       <FeatureFeedback />

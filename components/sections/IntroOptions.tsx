@@ -11,7 +11,7 @@ export default function IntroOptions() {
       <Container>
         {/* 섹션 타이틀 */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-3 leading-[1.2]">
             테이블에 태그만 부착하여 시작할 수 있어요
           </h2>
           <p className="text-lg text-foreground/60">
@@ -40,16 +40,16 @@ export default function IntroOptions() {
                   태그히어 주문/결제 태그
                 </h3>
                 <ul className="space-y-2 text-foreground/70">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#3B82F6] mt-1">✓</span>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#3B82F6] shrink-0">✓</span>
                     <span>주문 데이터, 앉았던 좌석, 방문경로 추적</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#3B82F6] mt-1">✓</span>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#3B82F6] shrink-0">✓</span>
                     <span>카카오톡 연동으로 고객 정보 수집</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#3B82F6] mt-1">✓</span>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#3B82F6] shrink-0">✓</span>
                     <span>사용하고 있는 POS 프로그램들과 자동 연동</span>
                   </li>
                 </ul>
@@ -65,16 +65,16 @@ export default function IntroOptions() {
                   태그히어 스탬프 적립 태그
                 </h3>
                 <ul className="space-y-2 text-foreground/70">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#3B82F6] mt-1">✓</span>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#3B82F6] shrink-0">✓</span>
                     <span>테이블에 태그만 설치하면 준비 끝</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#3B82F6] mt-1">✓</span>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#3B82F6] shrink-0">✓</span>
                     <span>카카오톡 연동으로 고객 정보 수집</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#3B82F6] mt-1">✓</span>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#3B82F6] shrink-0">✓</span>
                     <span>방문 횟수, 기본 고객 정보 획득</span>
                   </li>
                 </ul>

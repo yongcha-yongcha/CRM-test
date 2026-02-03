@@ -10,8 +10,7 @@ export default function MarketingOwn() {
     <AnimatedSection className="py-24 bg-white">
       <Container>
         <div className="text-center mb-12">
-          <span className="text-[#3B82F6] font-medium">[마케팅]</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4 mt-2 leading-[1.2]">
             매장에서 직접 쌓은 고객 DB를 활용한 마케팅 집행
           </h2>
           <p className="text-neutral-600">

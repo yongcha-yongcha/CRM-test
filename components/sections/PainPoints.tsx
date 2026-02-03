@@ -69,7 +69,7 @@ export default function PainPoints() {
                 willChange: "opacity, transform",
               }}
             >
-              <h2 className="text-center text-3xl font-bold text-foreground pt-8">
+              <h2 className="text-center text-3xl font-bold text-foreground pt-8 leading-[1.2]">
                 혹시 이런 고민, 하고 계시지 않으세요?
               </h2>
 
@@ -173,7 +173,7 @@ export default function PainPoints() {
                 willChange: "opacity, transform",
               }}
             >
-              <h2 className="text-center text-3xl font-bold text-foreground md:text-4xl">
+              <h2 className="text-center text-3xl font-bold text-foreground md:text-4xl leading-[1.2]">
                 혹시 이런 고민, 하고 계시지 않으세요?
               </h2>
 

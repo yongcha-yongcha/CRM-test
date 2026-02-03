@@ -26,7 +26,7 @@ export default function Pricing() {
           <span className="text-[#3B82F6] font-medium tracking-wide uppercase text-sm">
             PRICING PLAN
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mt-2 leading-[1.2]">
             합리적인 요금, <span className="text-[#3B82F6]">쓴 만큼만</span>
           </h2>
           <p className="text-neutral-600 mt-3">
@@ -34,7 +34,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
           {/* 좌측: 기본 월 구독료 */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

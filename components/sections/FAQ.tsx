@@ -15,7 +15,7 @@ export default function FAQ() {
     <AnimatedSection className="py-24 bg-white">
       <Container>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">자주 묻는 질문</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 leading-[1.2]">자주 묻는 질문</h2>
 
           <Card className="border-border rounded-xl">
             <CardContent className="p-0">
@@ -42,7 +42,7 @@ export default function FAQ() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-3" className="border-b border-border">
+                <AccordionItem value="item-3b" className="border-b border-border">
                   <AccordionTrigger className="text-lg font-bold text-left px-6 py-6 hover:no-underline">
                     Q. 정말 월 구독료가 무료인가요?
                   </AccordionTrigger>

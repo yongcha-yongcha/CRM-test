@@ -43,7 +43,7 @@ export default function DataCollection() {
     <AnimatedSection className="py-24 bg-neutral-950">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-[1.2]">
             태그히어를 이용만 해도 쌓이는 고객 정보
           </h2>
           <p className="text-neutral-400">

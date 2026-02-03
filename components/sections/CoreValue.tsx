@@ -3,99 +3,91 @@
 import AnimatedSection from "@/components/layout/AnimatedSection";
 import Container from "@/components/layout/Container";
 import { motion } from "framer-motion";
-import { Database, Users, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function CoreValue() {
   return (
-    <AnimatedSection className="py-24 bg-white">
+    <AnimatedSection className="py-24 bg-[#F2F3F4]">
       <Container>
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            설치만 해도 자동으로 쌓이는 고객 데이터,
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 leading-[1.2]">
+            고객 데이터,
             <br />
-            <span className="text-[#3B82F6]">태그히어 CRM</span>
+            설치 하나로 완성
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* 좌측: 자동 수집 시스템 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* 왼쪽 카드: 자동 수집 */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-neutral-50 rounded-2xl p-8 border border-neutral-200"
+            className="bg-white rounded-3xl p-8 md:p-10"
           >
-            <div className="w-12 h-12 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-6">
-              <Database className="w-6 h-6 text-[#3B82F6]" />
-            </div>
-            <h3 className="text-xl font-bold text-neutral-900 mb-3">
-              이름, 성별, 연령대, 연락처, 생일까지 자동 확보
+            <h3 className="text-[20px] font-bold text-[#1D2022] leading-[1.3] mb-3">
+              주문만 받으세요. 고객의 모든 취향이 저절로 쌓입니다.
             </h3>
-            <p className="text-neutral-600 mb-6">
-              방문한 손님들은 태그히어를 통해 바로 매장의 고객으로 등록돼요.
+            <p className="text-[#55595E] text-[16px] leading-[1.5] mb-8">
+              주문이 곧 데이터가 됩니다. 이름부터 취향까지, 사장님이 신경 쓸 건 하나도 없습니다. 모든 기록은 자동입니다.
             </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold text-neutral-900">자동 수집 시스템 (카카오톡 연동)</p>
-                  <p className="text-sm text-neutral-600">
-                    태그히어 주문/결제 또는 포인트/스탬프 적립 시 매번 전화번호 입력을 하지 않아도 카카오톡 연동을 통해 고객의 정보를 동의하에 수집해요.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold text-neutral-900">상세 데이터 확보</p>
-                  <p className="text-sm text-neutral-600">
-                    이름, 연락처는 기본, 방문 경로와 선호 메뉴, 앉았던 좌석, 생일, 연령대까지 꼼꼼하게 관리됩니다.
-                  </p>
-                </div>
-              </div>
+
+            <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden">
+              <Image
+                src="/data-01.png"
+                alt="고객 데이터 자동 수집"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </motion.div>
 
-          {/* 우측: 전국 고객 DB */}
+          {/* 오른쪽 카드: 타겟 마케팅 */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-neutral-50 rounded-2xl p-8 border border-neutral-200"
+            className="bg-white rounded-3xl p-8 md:p-10"
           >
-            <div className="w-12 h-12 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-6">
-              <Users className="w-6 h-6 text-[#3B82F6]" />
-            </div>
-            <h3 className="text-xl font-bold text-neutral-900 mb-3">
-              전국 고객 DB로 신규 고객 찾기
+            <h3 className="text-[20px] font-bold text-[#1D2022] leading-[1.3] mb-3">
+              우리 가게를 좋아할 사람만 콕 집어냅니다.
             </h3>
-            <p className="text-neutral-600 mb-6">
-              우리 동네 잠재 고객에게 직접 마케팅
+            <p className="text-[#55595E] text-[16px] leading-[1.5] mb-8">
+              아무에게나 보내지 마세요. 불특정 다수는 낭비입니다. 우리 동네에서 내 요리를 좋아할 사람, 딱 그들에게만 보냅니다.
             </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold text-neutral-900">태그히어 전국 네트워크 활용</p>
-                  <p className="text-sm text-neutral-600">
-                    전국 태그히어 매장에서 수집된 방대한 고객 데이터를 활용하여 우리 동네 시/군/구, 선호 업종에 맞추어 카카오톡/메시지를 발송 할 수 있어요.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold text-neutral-900">정교한 타겟 마케팅</p>
-                  <p className="text-sm text-neutral-600">
-                    &quot;우리 동네 + 우리 업종&quot;에 관심 있는 마케팅 동의 고객에게만 발송합니다.
-                  </p>
-                </div>
-              </div>
+
+            <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden">
+              <Image
+                src="/data-02.png"
+                alt="타겟 마케팅"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </motion.div>
         </div>
+
+        {/* 하단 전폭 이미지 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-6 w-full rounded-3xl overflow-hidden"
+        >
+          <Image
+            src="/mainheader.png"
+            alt="메인 헤더"
+            width={1200}
+            height={600}
+            className="w-full h-auto"
+            sizes="100vw"
+          />
+        </motion.div>
       </Container>
     </AnimatedSection>
   );

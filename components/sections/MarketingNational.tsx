@@ -10,8 +10,7 @@ export default function MarketingNational() {
     <AnimatedSection className="py-24 bg-neutral-950">
       <Container>
         <div className="text-center mb-12">
-          <span className="text-[#3B82F6] font-medium">[마케팅]</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 mt-2 leading-[1.2]">
             전국에서 모은 고객 DB를 활용해 신규 고객을 유치
           </h2>
           <p className="text-neutral-400">
