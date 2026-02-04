@@ -11,7 +11,7 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="relative mx-4 my-4 flex flex-col items-center justify-center gap-2 text-center"
       >
-        <motion.h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.3]">
+        <motion.h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white" style={{ lineHeight: 1.3 }}>
           고객 데이터는{" "}
           <span className="text-[#3B82F6]">자동으로</span> 쌓고,
           <br />
@@ -65,18 +65,6 @@ export default function Hero() {
             월 0원 이벤트는 조기종료 될 수 있습니다.
           </p>
         </div>
-      </div>
-
-      {/* 정적 제품 이미지 */}
-      <div className="max-w-5xl mx-auto mt-12 px-4">
-        <Image
-          src="/crm-dashboard.png"
-          alt="CRM Dashboard Preview"
-          width={1200}
-          height={800}
-          className="w-full h-auto rounded-2xl border border-white/10 shadow-2xl shadow-black/50"
-          priority
-        />
       </div>
 
       {/* 신뢰 지표 (Infinite Logo Marquee) */}
