@@ -11,7 +11,7 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="relative mx-4 my-4 flex flex-col items-center justify-center gap-2 text-center"
       >
-        <motion.h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+        <motion.h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.3]">
           고객 데이터는{" "}
           <span className="text-[#3B82F6]">자동으로</span> 쌓고,
           <br />
