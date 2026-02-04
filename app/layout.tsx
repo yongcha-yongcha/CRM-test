@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className="antialiased font-sans w-full" style={{ fontFamily: 'var(--font-pretendard, "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif)' }}>
         {children}
+        <GoogleAnalytics gaId="G-2RRJQQ413Z" />
       </body>
     </html>
   );
