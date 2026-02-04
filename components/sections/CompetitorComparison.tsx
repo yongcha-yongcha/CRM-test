@@ -122,9 +122,14 @@ export default function CompetitorComparison() {
 
                 {/* CTA 버튼 */}
                 <CardFooter className="px-6 pb-6 pt-2">
-                  <button className="w-full bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold py-3 rounded-xl transition-colors text-sm">
+                  <a
+                    href="https://tally.so/r/jab1oR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold py-3 rounded-xl transition-colors text-sm text-center block"
+                  >
                     무료로 시작하기
-                  </button>
+                  </a>
                 </CardFooter>
               </Card>
             </motion.div>
